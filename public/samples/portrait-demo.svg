@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#bg)"/>
+  <circle cx="600" cy="560" r="240" fill="#f8fafc" opacity="0.92"/>
+  <rect x="300" y="900" width="600" height="420" rx="220" fill="#e2e8f0"/>
+  <text x="600" y="1490" font-size="96" font-family="Arial" text-anchor="middle" fill="#ffffff">Lithospeak Demo</text>
+</svg>

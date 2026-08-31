@@ -1,0 +1,32 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.tsbuildinfo
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Legacy OpenSCAD/Python prototype artifacts (not part of the web app)
+__pycache__/
+*.pyc
+/scripts/__pycache__/
+/generated/
+/output/
+/Picture frames/
+/Puzzles/
+legacy/generated/
+legacy/output/
+legacy/**/__pycache__/
+
+# Logs
+npm-debug.log*

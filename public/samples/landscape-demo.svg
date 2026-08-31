@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1180" cy="220" r="92" fill="#fef3c7"/>
+  <path d="M0 700L210 550L420 690L660 480L910 690L1180 430L1450 650L1600 580V1000H0Z" fill="#0f172a"/>
+  <path d="M0 780L190 650L450 830L720 610L980 860L1250 630L1600 820V1000H0Z" fill="#111827"/>
+  <text x="120" y="150" font-size="110" font-family="Arial" fill="#ffffff">Sample Landscape</text>
+</svg>
