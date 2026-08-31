@@ -327,10 +327,17 @@ function openingLatitude(settings: ProjectSettings): number {
   return settings.openingPosition === "top" ? 90 - (capAngle * 180) / Math.PI : -90 + (capAngle * 180) / Math.PI;
 }
 
+function sphereDensityFactor(layers: RasterLayer[]): number {
+  if (layers.length === 0) return 1;
+  const tightestSpanDeg = layers.reduce((min, layer) => Math.min(min, layer.widthDeg, layer.heightDeg), 360);
+  return clamp(180 / Math.max(tightestSpanDeg, 12), 1, 2);
+}
+
 function generateSphereShell(settings: ProjectSettings, layers: RasterLayer[], split: "none" | "top" | "bottom"): MeshData {
   const mesh = builder();
-  const cols = settings.advanced.meshResolution * 2;
-  const rows = settings.advanced.meshResolution;
+  const densityFactor = sphereDensityFactor(layers);
+  const cols = Math.min(640, Math.round(settings.advanced.meshResolution * 2 * densityFactor));
+  const rows = Math.min(320, Math.round(settings.advanced.meshResolution * densityFactor));
   const outerR = settings.sphereDiameter / 2;
   const seamLat = 0;
   const seamBand = settings.advanced.seamBandDegrees / 2;
